@@ -2,29 +2,67 @@
 title: "Data types"
 author: "Ihsan Fadilah - Oxford University Clinical Research Unit, Jakarta"
 date: "`r Sys.Date()`"
-output: html_document
+output: rmdformats::robobook
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+# Package dependencies
+library(knitr)
+library(kableExtra)
 ```
 
-## R Markdown
+Types or classes of data.
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+## Numeric
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Numbers with a decimal.
 
-```{r cars}
-summary(cars)
+```{r}
+numer <- 1.9
+class(numer) # Check the type of an object
+is.numeric(numer) # A logical test to check a specific class of data
+as.character(numer) # Cource into a character
 ```
 
-## Including Plots
+## Integers
 
-You can also embed plots, for example:
+Whole numbers.
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r}
+integ <- 0L
+class(integ)
+is.integer(integ)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Logical
+
+`TRUE`, `FALSE`, and `NA`.
+
+```{r}
+logi <- NA
+class(logi)
+is.logical(logi)
+```
+
+## Character
+
+Word(s).
+
+```{r}
+charac <- 'coffee break'
+class(charac)
+```
+
+### Factor
+
+Words with additional features. Categorical variables with/without a natural order.
+
+## Date-time
+
+## Exercises
+
+```{r session-info}
+xfun::session_info()
+```
